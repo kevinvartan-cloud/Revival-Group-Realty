@@ -6,6 +6,7 @@ const NAV = [
   { label: "Invest", href: "/invest" },
   { label: "Develop", href: "/develop" },
   { label: "Neighborhoods", href: "/neighborhoods" },
+  { label: "Insights", href: "/insights" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];
@@ -20,7 +21,6 @@ const PLATFORM = [
 ];
 
 const COMPLIANCE = [
-  { label: "Guides", href: "/guides" },
   { label: "Privacy Policy", href: "/privacy" },
   { label: "Terms of Use", href: "/terms" },
 ];

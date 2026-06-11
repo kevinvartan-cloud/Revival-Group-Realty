@@ -9,6 +9,7 @@ const LINKS = [
   { label: "Invest", href: "/invest" },
   { label: "Develop", href: "/develop" },
   { label: "Neighborhoods", href: "/neighborhoods" },
+  { label: "Insights", href: "/insights" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];
@@ -66,7 +67,7 @@ export default function Navigation() {
 
         {/* Desktop Links */}
         <div
-          className={`hidden lg:flex items-center gap-8 transition-colors duration-500 ${
+          className={`hidden lg:flex items-center gap-6 xl:gap-7 transition-colors duration-500 ${
             scrolled ? "text-ink" : "text-cream"
           }`}
         >
@@ -121,7 +122,7 @@ export default function Navigation() {
       {/* Mobile Menu Drawer */}
       <div
         className={`lg:hidden bg-forest transition-all duration-400 overflow-hidden ${
-          menuOpen ? "max-h-[28rem] border-b border-cream/10" : "max-h-0"
+          menuOpen ? "max-h-[34rem] border-b border-cream/10" : "max-h-0"
         }`}
       >
         <div className="px-8 pt-2 pb-8 flex flex-col gap-6">

@@ -5,6 +5,7 @@ import ClientPaths from "@/app/components/ClientPaths";
 import WhyRevival from "@/app/components/WhyRevival";
 import NeighborhoodsTeaser from "@/app/components/NeighborhoodsTeaser";
 import FutureListings from "@/app/components/FutureListings";
+import InsightsTeaser from "@/app/components/InsightsTeaser";
 import CTASection from "@/app/components/CTASection";
 import Footer from "@/app/components/Footer";
 
@@ -18,6 +19,7 @@ export default function Home() {
       <WhyRevival />
       <NeighborhoodsTeaser />
       <FutureListings />
+      <InsightsTeaser />
       <CTASection
         eyebrow="Get Started"
         title="Begin with"
