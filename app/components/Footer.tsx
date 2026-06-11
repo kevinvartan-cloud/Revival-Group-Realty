@@ -10,21 +10,19 @@ const NAV = [
   { label: "Contact", href: "/contact" },
 ];
 
-// TODO(platform): point these at the live Revival Group platform routes /
-// external sites once available. Placeholders for now.
+const DEV_GROUP_URL = "https://www.revivaldevelopmentgroup.com/";
+
 const PLATFORM = [
-  { label: "Revival Group Development", href: "#" },
-  { label: "Development Advisory", href: "#" },
-  { label: "Construction / Feasibility", href: "#" },
+  { label: "Revival Group Development", href: DEV_GROUP_URL, external: true },
+  { label: "Development Advisory", href: DEV_GROUP_URL, external: true },
+  { label: "Construction / Feasibility", href: DEV_GROUP_URL, external: true },
   { label: "Investment Strategy", href: "/invest" },
 ];
 
-// TODO(compliance): replace placeholder routes with real Privacy Policy, Terms,
-// and MLS/IDX disclaimer pages before launch.
 const COMPLIANCE = [
   { label: "Guides", href: "/guides" },
-  { label: "Privacy Policy", href: "#" },
-  { label: "Terms of Use", href: "#" },
+  { label: "Privacy Policy", href: "/privacy" },
+  { label: "Terms of Use", href: "/terms" },
 ];
 
 export default function Footer() {
@@ -45,9 +43,10 @@ export default function Footer() {
                 representation for buyers, sellers, investors, and
                 development-minded clients.
               </p>
-              {/* TODO(platform): link to the live Revival Group Development site. */}
               <a
-                href="#"
+                href={DEV_GROUP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="font-sans text-[9px] tracking-[0.25em] uppercase text-gold/60 hover:text-gold transition-colors duration-200 inline-flex items-center gap-1.5"
               >
                 Part of the Revival Group platform
@@ -80,13 +79,16 @@ export default function Footer() {
                 Platform
               </div>
               <ul className="space-y-3.5">
-                {PLATFORM.map(({ label, href }) => (
+                {PLATFORM.map(({ label, href, external }) => (
                   <li key={label}>
                     <a
                       href={href}
-                      className="font-sans text-sm text-cream/40 hover:text-cream/80 transition-colors duration-200"
+                      target={external ? "_blank" : undefined}
+                      rel={external ? "noopener noreferrer" : undefined}
+                      className="font-sans text-sm text-cream/40 hover:text-cream/80 transition-colors duration-200 inline-flex items-center gap-1.5"
                     >
                       {label}
+                      {external && <span className="text-[10px] text-cream/25">↗</span>}
                     </a>
                   </li>
                 ))}

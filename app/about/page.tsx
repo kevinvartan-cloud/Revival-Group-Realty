@@ -195,9 +195,10 @@ export default function AboutPage() {
                 connection is what lets the brokerage bring a development-informed
                 perspective to land, infill, and repositioning opportunities.
               </p>
-              {/* TODO(platform): link to the live Revival Group Development site. */}
               <a
-                href="#"
+                href="https://www.revivaldevelopmentgroup.com/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 mt-6 font-sans text-[10px] tracking-[0.25em] uppercase text-forest border border-forest/30 px-7 py-3 hover:bg-forest hover:text-cream transition-all duration-300"
               >
                 Explore Revival Group Development ↗
