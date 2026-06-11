@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+/* ─────────────────────────────────────────────
+   Design Tokens — Revival Group Realty
+───────────────────────────────────────────── */
+@theme {
+  /* Colors */
+  --color-cream: #F5EFE4;
+  --color-parchment: #EDE7DA;
+  --color-parchment-dark: #E0D9CC;
+  --color-forest: #1C3829;
+  --color-forest-mid: #243F31;
+  --color-forest-light: #2E5040;
+  --color-navy: #162440;
+  --color-navy-light: #1E3057;
+  --color-sage: #3D6B52;
+  --color-sage-light: #C8DCCF;
+  --color-gold: #B8946A;
+  --color-gold-light: #D4B896;
+  --color-ink: #1C1C1A;
+  --color-muted: #7A6F64;
+
+  /* Typography */
+  --font-serif: var(--font-playfair), "Playfair Display", Georgia, "Times New Roman", serif;
+  --font-sans: var(--font-dm-sans), "DM Sans", system-ui, -apple-system, sans-serif;
+
+  /* Animations */
+  --animate-marquee: marquee 50s linear infinite;
+  --animate-fade-up: fadeUp 0.9s ease-out forwards;
+  --animate-fade-in: fadeIn 0.9s ease-out forwards;
+}
+
+/* ─────────────────────────────────────────────
+   Keyframes
+───────────────────────────────────────────── */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ─────────────────────────────────────────────
+   Base Styles
+───────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #F5EFE4;
+  color: #1C1C1A;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Prevent dark-mode overrides — this site has its own palette */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #F5EFE4;
+    color: #1C1C1A;
+  }
+}
